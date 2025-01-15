@@ -1,7 +1,14 @@
-# ROS2_tf2_Broadcaster
-Using Rviz Marker Messages for Visualizing  tf2_ros/transform_broadcaster
+# Robot-Operating-System
+Design and implementation of a multi-agent path planning system using the Robot Operating System 2 (ROS2) framework. The system leverages ROS2’s various communication models to enable realtime efficient coordination between multiple autonomous agents operating in a shared multi-level environment
 
-**System Info:** These packages were tested on Ubuntu 22.04 with ROS Humble.
+A publisher-subscriber communication model for agents to boradcast its position to the central co-ordinator which updates the global state map
+
+A server-client communication model for agents to request path for scehduled tasks 
+
+ROS2 uses a well-organized file structure to manage packages, nodes, and resources. <br>
+A package is the basic unit of software organization. Each package contains all the necessary files for a specific functionality, such as nodes, launch files, configuration files, etc.
+
+**System Info:** These packages were tested on Ubuntu 22.04 with ROS2 Humble.
 
 ### Runtime Instructions
 
@@ -20,7 +27,6 @@ Ready to update goal pose for agent
 ```
 
 To Broadcast Transforms type `ros2 service call /update_goal my_robot_interfaces/srv/UpdateGoal "goal_pose:` 
-(hit tab)
 ```
   position:
     x: 0.0
